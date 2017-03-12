@@ -1,0 +1,287 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body {
+  color: $text-color;
+  font-family: $font-family-sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+h1 {
+  color: $header-color;
+  font-family: $font-family-sans-serif;
+}
+
+p {
+  color: $text-color;
+  font-family: $font-family-sans-serif;
+}
+
+
+
+.sketch-div {
+  height: 90vh;
+  background-color: $upper-section-color;
+  display: flex;
+  flex-direction: row;
+}
+
+.sketch-div-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.sketch-div-header>.header-center{
+  z-index: 2;
+}
+
+.sketch-div-header>.header-center>h1{
+  color: $white-header;
+  font-size: 3.8em;
+  font-weight: $font-weight;
+}
+
+.container-fluid {
+  margin-top: 0;
+}
+
+#particles-js {
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+}
+
+.navbar{
+  margin-bottom: 0;
+  background: $white-header;
+}
+
+.navbar-nav>li>a{
+  color: $link-color !important;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 2em;
+  font-style: normal;
+}
+
+.content-section{
+  display: block;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  clear:both;
+}
+
+.content-header {
+  padding-bottom: 75px;
+}
+
+#skill-section {
+  min-height: 250px;
+  border-radius: 10px;
+  transition: box-shadow 0.5s;
+  &:hover, &focus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.inner-skill-section {
+  padding: 15px;
+}
+
+.skill-section-icon i{
+  font-size: 150px;
+  padding: 15px;
+}
+
+.skill-section-rating {
+  display: inline-block;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.skill-section-text {
+  margin-top: 10px;
+}
+
+.skill-section-button  {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  clear:both;
+}
+
+.skill-section-button > a {
+  padding: 1.2rem 3.2rem;
+  color: $text-color;
+  border: 2px solid #FDCD3B;
+  border-radius: 50px;
+}
+
+.mailme-button{
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  clear:both;
+}
+.mailme-button > button {
+  padding: 1.2rem 3.2rem;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.footer {
+  background-color: #2A3A3F;
+  padding: 80px 0 50px;
+  text-align: center;
+}
+
+.footer p {
+  display: block;
+  text-align: center;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
+.form-container input[type=text] {
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: 2px solid $upper-section-color;
+  color: $text-color;
+}
+
+.form-container textarea {
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: 2px solid $upper-section-color;
+  color: $text-color;
+}
+
+#contact {
+  height: auto;
+  background-color: #FDCD3B;
+  clear:both;
+}
+
+
+.modal-dialog{
+  height: 100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  background-color: #383838;
+}
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+#myInfo {
+  @include breakpoint(xs){
+    height: auto;
+  }
+  @include breakpoint(sm){
+    height: auto;
+  }
+  @include breakpoint(md){
+    height: auto;
+  }
+  @include breakpoint(lg){
+    height:auto;
+  }
+
+}
+
+.form-container {
+  @include breakpoint(xs){
+    width: 90%;
+  }
+  @include breakpoint(sm){
+    width: 80%;
+  }
+  @include breakpoint(md){
+    width: 50%;
+  }
+  @include breakpoint(lg){
+    width: 50%;
+  }
+  width: 50%;
+  padding: 10%;
+  margin: 0 auto;
+}
+
+.close {
+  font-size: 60px;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+
+.content h1 {
+  display: block;
+  text-align: center;
+}
